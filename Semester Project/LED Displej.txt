@@ -1,0 +1,3 @@
+DVA ZPUSOBY KRESLENI OBRAZKU
+1) vynulovat pamet a pak si naalokovat frame buffer na cely obrazek a poslat to tam najednou
+2) vygenerovat barvicku pro kazdy pixel

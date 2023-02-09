@@ -1,0 +1,38 @@
+////////////////////////////////////////////////////////////////
+// SSH
+////////////////////////////////////////////////////////////////
+
+1) Pripojim se na postel
+NE TAKTO ssh maleklu6@postel.felk.cvut.cz
+ALE TAKTO scp maleklu6@postel.felk.cvut.cz:/opt/zynq/ssh-connect/mzapo-root-key .
+
+2) Natahnu si k sobe pristup k desce, at nehazi permission denied
+chmod go-rwx mzapo-root-key
+ssh-add mzapo-root-key
+
+3) Pripojim se k desce
+ssh root@192.168.0.59 (doma)
+ssh root@192.168.1.35 (doma2)
+ssh root@192.168.8.101 (jinonice)
+
+NA CO SI DAT POZOR
+ip adresu cteme po radcich 1radek.2radek.3radek.4radek
+na cw je na jako treti radek 202, ale doma nam to muze vychazet jinak!!
+
+////////////////////////////////////////////////////////////////
+// SSHFS - KOPIROVANI DAT
+////////////////////////////////////////////////////////////////
+
+Kopirovani na desky:
+budto pres scp (v prikazovce pouze kopiruje soubory, pokud chceme nejake rozhrani, nutno min WinSCP/Putty)
+nebo sshfs - bezne ssh nepovoluje presun souboru, toto ano, udela to rouru mezi temi dvema slozkami, v obou budou stejna data
+
+sshfs root@192.168.8.101:/root/sem_prac /home/brekkit/Desktop/APO_Semprac/sshfs
+zde to natahne pouze tu nami vytvorenou slozku - netaha to ten pisy material
+
+sshfs root@192.168.1.35:/root/sem_prac /home/brekkit/Desktop/APO_Semprac/sshfs (doma2)
+
+nakopiruje to obsah hlavni slozky (pokud za : dame neco jineho, namountuje to zvolenou slozku na desce) do zvolene slozky /home/brekkit/Desktop/APO_Semprac/sshfs pomoci ktere to pak kopirujeme
+
+sudo umount /home/brekkit/Desktop/APO_Semprac/sshfs
+odmountuje spojeni

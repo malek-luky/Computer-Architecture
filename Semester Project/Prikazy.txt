@@ -1,0 +1,6 @@
+PRIKAZY
+BLIKANI LED: /opt/zynq/tests/test-spi
+TOCENI MOTORKU: rdwrmem -b4 -s 0x43c20000 -F 0x111111111
+
+rdwrmem -b4 -s 0x43c20000 -F 0x38 - zapnuti motorku pro plneni dle PWM
+rdwrmem -b4 -s 0x43c20008 -F 0x11111111 - nastaveni PWM  

@@ -1,0 +1,3 @@
+CHYBY ZA BOBRIKA
+rdwrmem -b4 -s 0x43c20000 -F 0x111111111 - chyba na netu
++matouci ip 202 pri pripojeni z domova

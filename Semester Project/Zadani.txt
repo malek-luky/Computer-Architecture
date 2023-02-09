@@ -1,0 +1,15 @@
+ZADANI
+Dokumentace k desce - https://cw.fel.cvut.cz/wiki/courses/b35apo/documentation/mz_apo/start - vse o rizeni motorku
+
+PWM - idealka 20khz (100 000, bude to neco delit dvaceti)
+mira plneni - nejvyssi bit kam se to toci
+polohu odecitam z 0x108
+pro chod PWM musim vynulovai IRC
+pozit nejakou zpetnou vazbu pomoci konstanty ktera bude pracovat
+
+TEXT na pozadovanou a skutecnou pozici
+graf prubehu
+regulacni zasah
+rgb ledka muze rikat intenzitou ci barvou jak moc je uvedene proudu na kterou stranu motorku
+
+Moznost udelat PID controler

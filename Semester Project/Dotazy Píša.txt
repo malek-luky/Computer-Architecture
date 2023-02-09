@@ -1,0 +1,2 @@
+1) Jak menit rychlost motoru
+2) Jak prepsat konkretni pixel bez posilani celeho nove obrazku na LED displej
